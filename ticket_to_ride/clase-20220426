@@ -1,0 +1,18 @@
+Sistema Ticket:
+       |------- Nivel más alto de abstracción. --  Analisis                                  -Gestionar = ABM/CRUD
+       |- 1 - Entender el problema (Dominio aplicacion) 
+       |- 2 - Requerimientos (Req.Func, Req.No_Func, etc.) Ej. "El sistema deberá... (gestionar)"
+       |- - - a) - El sistema deberá gestionar tickets
+       |- - - b) - El sistema deberá gestionar clientes
+
+       Requerimientos | Casos de uso (sust + verbo) | Historias de usuario => Identificar objetos del dominio | Diagramas de clases
+
+       Ticket - Cliente (objetos de dominio => me resuelven el modelo del problema)
+       GUI - Gestor (objetos/intefaces que me median con el usuario| crean objetos|
+                      no responden al modelo del dominio pero son necesarios)
+        
+       => Diagramas de secuencia | Estado 
+
+       => Diseño del Codigo 
+
+       => Codifcacion => Testeo => Refactoring => Deploy
