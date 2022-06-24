@@ -2,6 +2,7 @@
 #include <iostream>
 
 void TestOCFString(OCFString string) {
+    std::cout << string;
 }
 
 int main() {
