@@ -5,32 +5,54 @@ OCFString::OCFString() {
     rep[0] = '\0';
 }
 
-OCFString::OCFString(const OCFString &string) {
-    rep = new char[string.size() + 1];
-    strcpy(rep, string.rep);
+OCFString::OCFString(const OCFString &s) {
+    rep = new char[s.size() + 1];
+    ::strcpy(rep, s.rep);
 }
 
-OCFString::OCFString(const char *string) {
-    int length = strlen(string) + 1;
+OCFString::OCFString(const char *s) {
+    int length = ::strlen(s) + 1;
     rep = new char[length];
+    ::strcpy(rep, s);
 }
 
 int OCFString::size() const {
-    return strlen(rep);
+    return ::strlen(rep);
 }
 
-OCFString& OCFString::operator=(const OCFString &string) {
-    if(rep != string.rep) {
+OCFString& OCFString::operator=(const OCFString &s) {
+    if(rep != s.rep) {
         delete[] rep;
-        int length = string.size() + 1;
+        int length = s.size() + 1;
         rep = new char[length];
-        strcpy(rep, string.rep);
+        ::strcpy(rep, s.rep);
     }
     return *this;
 }
 
-std::ostream& operator<<(std::ostream& os, const OCFString& string) {
-    os << string.rep;
+OCFString& operator+(OCFString& left, const OCFString& right) 
+{
+    char* rep = new char[left.size() + right.size() + 1];
+    ::strcpy(rep, left.rep);
+    ::strcat(rep, right.rep);
+    delete[] left.rep;
+    left.rep = rep;
+    return left;
+}
+
+const OCFString operator+(const OCFString& left, const OCFString& right) 
+{
+    OCFString retval(left);
+    return retval + right;
+}
+
+OCFString operator+(const char* left, const OCFString& right) 
+{
+    return OCFString(left) + right;
+}
+
+std::ostream& operator<<(std::ostream& os, const OCFString& s) {
+    os << s.rep;
     return os;
 }
 

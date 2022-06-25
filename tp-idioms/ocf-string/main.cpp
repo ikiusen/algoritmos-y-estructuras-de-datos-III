@@ -1,8 +1,8 @@
-#include <OCFString.h>
 #include <iostream>
+#include <OCFString.h>
 
-void TestOCFString(OCFString string) {
-    std::cout << string;
+void TestOCFString(OCFString s2) {
+    std::cout << s2;
 }
 
 int main() {
@@ -10,6 +10,6 @@ int main() {
     OCFString s2 = s1;
     OCFString vec[10];
 
-    TestOCFString(s1);
+    TestOCFString(s2);
     return 0;
 }
