@@ -1,21 +1,25 @@
 #include <iostream>
 #include <LinkedList.h>
 
-LinkedList::LinkedList() {
-    this->head = NULL;
+LinkedList::LinkedList()
+{
+	this->head = NULL;
 }
 
-void LinkedList::insertNode(Patient* patient) {
+void LinkedList::insertNode(Patient *patient)
+{
 
-	Node* newNode = new Node(patient);
+	Node *newNode = new Node(patient);
 
-	if (head == NULL) {
+	if (head == NULL)
+	{
 		head = newNode;
 		return;
 	}
 
-	Node* temp = head;
-	while (temp->next != NULL) {
+	Node *temp = head;
+	while (temp->next != NULL)
+	{
 
 		// Update temp
 		temp = temp->next;
@@ -24,33 +28,39 @@ void LinkedList::insertNode(Patient* patient) {
 	temp->next = newNode;
 }
 
-void LinkedList::printList() {
-	Node* temp = head;
+void LinkedList::printList()
+{
+	Node *temp = head;
 
 	// Check for empty list.
-	if (head == NULL) {
+	if (head == NULL)
+	{
 		std::cout << "List empty" << std::endl;
 		return;
 	}
 
 	// Traverse the list.
-	while (temp != NULL) {
+	while (temp != NULL)
+	{
 		std::cout << temp->patient->getPatientData() << std::endl;
 		temp = temp->next;
 	}
 }
 
-void LinkedList::deleteNode(int nodeOffset) {
+void LinkedList::deleteNode(int nodeOffset)
+{
 	Node *temp1 = head, *temp2 = NULL;
 	int ListLen = 0;
 
-	if (head == NULL) {
+	if (head == NULL)
+	{
 		std::cout << "List empty." << std::endl;
 		return;
 	}
 
 	// Find length of the linked-list.
-	while (temp1 != NULL) {
+	while (temp1 != NULL)
+	{
 		temp1 = temp1->next;
 		ListLen++;
 	}
@@ -58,9 +68,10 @@ void LinkedList::deleteNode(int nodeOffset) {
 	// Check if the position to be
 	// deleted is less than the length
 	// of the linked list.
-	if (ListLen < nodeOffset) {
+	if (ListLen < nodeOffset)
+	{
 		std::cout << "Index out of range"
-			<< std::endl;
+				  << std::endl;
 		return;
 	}
 
@@ -68,7 +79,8 @@ void LinkedList::deleteNode(int nodeOffset) {
 	temp1 = head;
 
 	// Deleting the head.
-	if (nodeOffset == 1) {
+	if (nodeOffset == 1)
+	{
 
 		// Update head
 		head = head->next;
@@ -78,7 +90,8 @@ void LinkedList::deleteNode(int nodeOffset) {
 
 	// Traverse the list to
 	// find the node to be deleted.
-	while (nodeOffset-- > 1) {
+	while (nodeOffset-- > 1)
+	{
 
 		// Update temp2
 		temp2 = temp1;
@@ -95,16 +108,20 @@ void LinkedList::deleteNode(int nodeOffset) {
 	delete temp1;
 }
 
-void LinkedList::editNode(Patient* old_patient, Patient* new_patient) {
+void LinkedList::editNode(Patient *old_patient, Patient *new_patient)
+{
 	Node *temp = head;
 
-	if (head == NULL) {
+	if (head == NULL)
+	{
 		std::cout << "List empty." << std::endl;
 		return;
 	}
 
-	while (temp->next != NULL) {
-		if (temp->patient->getPatientData() == old_patient->getPatientData()) {
+	while (temp->next != NULL)
+	{
+		if (temp->patient->getPatientData() == old_patient->getPatientData())
+		{
 			temp->patient = new_patient;
 			return;
 		}

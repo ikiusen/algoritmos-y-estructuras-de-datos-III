@@ -4,13 +4,13 @@
 int main()
 {
 	LinkedList list;
-	
-	Patient* patient_1 = new Patient("Jorge","Perez","34234982");
-	Patient* patient_2 = new Patient("Miguel","Rodriguez","23924772");
-	Patient* patient_3 = new Patient("Clara","Castelli","33444772");
-	Patient* patient_4 = new Patient("Felipe","Rodriguez","31924322");
 
-	Patient* edited_patient = new Patient("Carlos","Rodriguez","31924322");
+	Patient *patient_1 = new Patient("Jorge", "Perez", "34234982");
+	Patient *patient_2 = new Patient("Miguel", "Rodriguez", "23924772");
+	Patient *patient_3 = new Patient("Clara", "Castelli", "33444772");
+	Patient *patient_4 = new Patient("Felipe", "Rodriguez", "31924322");
+
+	Patient *edited_patient = new Patient("Carlos", "Rodriguez", "31924322");
 
 	list.insertNode(patient_1);
 	list.insertNode(patient_2);

@@ -5,11 +5,12 @@
 #include <ModernSofa.h>
 #include <ModernCoffeeTable.h>
 
-class ModernFurnitureFactory : public FurnitureFactory {
-    public:
-        ~ModernFurnitureFactory();
-        Chair* createChair();
-        Sofa* createSofa();
-        CoffeeTable* createCoffeeTable();
+class ModernFurnitureFactory : public FurnitureFactory
+{
+public:
+    ~ModernFurnitureFactory();
+    Chair *createChair();
+    Sofa *createSofa();
+    CoffeeTable *createCoffeeTable();
 };
 #endif

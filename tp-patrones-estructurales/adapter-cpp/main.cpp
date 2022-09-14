@@ -5,14 +5,15 @@
 #include <EngineAdapter.h>
 #include <StandardEngine.h>
 
-int main(){
+int main()
+{
     Application app;
 
-    StandardEngine* sEngine = new StandardEngine;
-    EconomicEngine* eEngine = new EconomicEngine;
-    ElectricConcreteEngine* evEngine = new ElectricConcreteEngine;
+    StandardEngine *sEngine = new StandardEngine;
+    EconomicEngine *eEngine = new EconomicEngine;
+    ElectricConcreteEngine *evEngine = new ElectricConcreteEngine;
 
-    EngineAdapter* adaptedEngine = new EngineAdapter(evEngine);
+    EngineAdapter *adaptedEngine = new EngineAdapter(evEngine);
 
     app.executeEngineTest(sEngine);
     app.executeEngineTest(eEngine);

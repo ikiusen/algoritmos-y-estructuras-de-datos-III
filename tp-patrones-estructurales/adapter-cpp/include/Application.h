@@ -2,8 +2,9 @@
 #define APPLICATION_H
 #include <Engine.h>
 
-class Application {
-    public:
-        void executeEngineTest(Engine* engine);
+class Application
+{
+public:
+    void executeEngineTest(Engine *engine);
 };
 #endif

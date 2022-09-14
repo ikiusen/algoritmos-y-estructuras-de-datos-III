@@ -2,14 +2,17 @@
 
 ModernFurnitureFactory::~ModernFurnitureFactory() {}
 
-Chair* ModernFurnitureFactory::createChair(){
+Chair *ModernFurnitureFactory::createChair()
+{
     return new ModernChair();
 }
 
-Sofa* ModernFurnitureFactory::createSofa(){
+Sofa *ModernFurnitureFactory::createSofa()
+{
     return new ModernSofa();
 }
 
-CoffeeTable* ModernFurnitureFactory::createCoffeeTable(){
+CoffeeTable *ModernFurnitureFactory::createCoffeeTable()
+{
     return new ModernCoffeeTable();
 }

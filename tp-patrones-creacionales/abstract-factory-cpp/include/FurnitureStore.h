@@ -4,7 +4,7 @@
 
 class FurnitureStore
 {
-    public:
-        void createAndShowFurniture(FurnitureFactory* factory);
+public:
+    void createAndShowFurniture(FurnitureFactory *factory);
 };
 #endif

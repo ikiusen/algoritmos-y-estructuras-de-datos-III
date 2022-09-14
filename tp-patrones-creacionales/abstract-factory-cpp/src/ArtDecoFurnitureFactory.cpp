@@ -2,14 +2,17 @@
 
 ArtDecoFurnitureFactory::~ArtDecoFurnitureFactory() {}
 
-Chair* ArtDecoFurnitureFactory::createChair() {
+Chair *ArtDecoFurnitureFactory::createChair()
+{
     return new ArtDecoChair();
 }
 
-Sofa* ArtDecoFurnitureFactory::createSofa() {
+Sofa *ArtDecoFurnitureFactory::createSofa()
+{
     return new ArtDecoSofa();
 }
 
-CoffeeTable* ArtDecoFurnitureFactory::createCoffeeTable() {
+CoffeeTable *ArtDecoFurnitureFactory::createCoffeeTable()
+{
     return new ArtDecoCoffeeTable();
 }

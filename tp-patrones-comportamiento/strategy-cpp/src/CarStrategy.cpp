@@ -1,6 +1,7 @@
 #include <CarStrategy.h>
 #include <iostream>
 
-void CarStrategy::executeAlgorithm() {
+void CarStrategy::executeAlgorithm()
+{
     std::cout << "Calculating route to take in a car..." << std::endl;
 }

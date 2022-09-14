@@ -1,12 +1,14 @@
 #include <Navigator.h>
 
-Navigator::Navigator(Strategy* strategy) : _strategy(strategy) {};
+Navigator::Navigator(Strategy *strategy) : _strategy(strategy){};
 
-void Navigator::setStrategy(Strategy* strategy) {
+void Navigator::setStrategy(Strategy *strategy)
+{
     delete _strategy;
     _strategy = strategy;
 }
 
-void Navigator::calculateRoute() {
+void Navigator::calculateRoute()
+{
     _strategy->executeAlgorithm();
 }

@@ -1,8 +1,9 @@
 #include <ModernSofa.h>
 
-ModernSofa::~ModernSofa(){}
+ModernSofa::~ModernSofa() {}
 
-std::string ModernSofa::toString() {
+std::string ModernSofa::toString()
+{
     std::string description = "I'm a modern sofa";
     return description;
 }

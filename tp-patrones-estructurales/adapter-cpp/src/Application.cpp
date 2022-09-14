@@ -1,7 +1,8 @@
 #include <iostream>
 #include <Application.h>
 
-void Application::executeEngineTest(Engine* engine) {
+void Application::executeEngineTest(Engine *engine)
+{
     std::cout << "Starting engine test.." << std::endl;
     engine->turnOn();
     engine->accelerate();

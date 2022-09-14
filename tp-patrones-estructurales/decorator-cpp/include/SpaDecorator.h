@@ -2,10 +2,11 @@
 #define SPADECORATOR_H
 #include <Decorator.h>
 
-class SpaDecorator : public Decorator {
-    public:
-        SpaDecorator(Accommodation* accommodation);
-        std::string getBaseBudget();
+class SpaDecorator : public Decorator
+{
+public:
+    SpaDecorator(Accommodation *accommodation);
+    std::string getBaseBudget();
 };
 
 #endif

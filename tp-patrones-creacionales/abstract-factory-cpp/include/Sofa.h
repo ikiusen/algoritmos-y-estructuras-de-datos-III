@@ -2,9 +2,10 @@
 #define SOFA_H
 #include <iostream>
 
-class Sofa {
-    public:
-        virtual ~Sofa(){};
-        virtual std::string toString() = 0;
+class Sofa
+{
+public:
+    virtual ~Sofa(){};
+    virtual std::string toString() = 0;
 };
 #endif

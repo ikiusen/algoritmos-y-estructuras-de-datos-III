@@ -2,14 +2,17 @@
 
 VictorianFurnitureFactory::~VictorianFurnitureFactory() {}
 
-Chair* VictorianFurnitureFactory::createChair(){
+Chair *VictorianFurnitureFactory::createChair()
+{
     return new VictorianChair();
 }
 
-Sofa* VictorianFurnitureFactory::createSofa(){
+Sofa *VictorianFurnitureFactory::createSofa()
+{
     return new VictorianSofa();
 }
 
-CoffeeTable* VictorianFurnitureFactory::createCoffeeTable(){
+CoffeeTable *VictorianFurnitureFactory::createCoffeeTable()
+{
     return new VictorianCoffeeTable();
 }
