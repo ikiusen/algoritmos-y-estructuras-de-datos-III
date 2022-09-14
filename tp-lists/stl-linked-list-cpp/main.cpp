@@ -4,15 +4,15 @@
 #include <algorithm>
 #include <Patient.h>
 
-void showList(std::list<Patient *> list)
+void showList(std::list<Patient*> list)
 {
-    std::list<Patient *>::iterator iterator;
+    std::list<Patient*>::iterator iterator;
     std::cout << "The contents of the list are: " << std::endl;
     for (iterator = list.begin(); iterator != list.end(); ++iterator)
         std::cout << (*iterator)->getPatientData() << std::endl;
 }
 
-void updateList(std::list<Patient *> *list, Patient *old_patient, Patient *new_patient)
+void updateList(std::list<Patient*> *list, Patient *old_patient, Patient *new_patient)
 {
     std::list<Patient *>::iterator iterator;
     for (iterator = list->begin(); iterator != list->end(); ++iterator)
@@ -28,7 +28,7 @@ void updateList(std::list<Patient *> *list, Patient *old_patient, Patient *new_p
 
 int main()
 {
-    std::list<Patient *> patient_list;
+    std::list<Patient*> patient_list;
 
     Patient *patient_1 = new Patient("Jorge", "Perez", "34234982");
     Patient *patient_2 = new Patient("Miguel", "Rodriguez", "23924772");

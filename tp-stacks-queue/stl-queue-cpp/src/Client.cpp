@@ -13,6 +13,6 @@ Client::~Client(){};
 std::string Client::getClientData()
 {
 	std::string clientData;
-	clientData = "Client name: " + _name + " Client surname: " + _surname;
+	clientData = " " + _name + " " + _surname;
 	return clientData;
 }
