@@ -8,7 +8,7 @@ void SortingMachine::setSortingMethod(ISorter *sortMethod)
     _sortMethod = sortMethod;
 }
 
-void SortingMachine::sort(int arr[])
+void SortingMachine::sort(int arr[], int arrayLength)
 {
-    _sortMethod->sort(arr);
+    _sortMethod->sort(arr, arrayLength);
 }

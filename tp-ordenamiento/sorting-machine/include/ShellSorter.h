@@ -4,8 +4,7 @@
 class ShellSorter : public ISorter
 {
 public:
-    ShellSorter();
-    ~ShellSorter();
-    void sort(int arr[]);
+    void sort(int arr[], int arrayLength);
+    void printArray(int arr[], int arrayLength);
 };
 #endif

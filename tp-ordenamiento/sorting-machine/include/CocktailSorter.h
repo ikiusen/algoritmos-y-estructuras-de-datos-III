@@ -4,7 +4,7 @@
 class CocktailSorter : public ISorter
 {
 public:
-    void sort(int arr[]);
-    void printArray(int arr[]);
+    void sort(int arr[], int arrayLength);
+    void printArray(int arr[], int arrayLength);
 };
 #endif

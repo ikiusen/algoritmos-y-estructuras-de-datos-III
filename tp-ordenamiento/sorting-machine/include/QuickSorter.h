@@ -4,8 +4,9 @@
 class QuickSorter : public ISorter
 {
 public:
-    QuickSorter();
-    ~QuickSorter();
-    void sort(int arr[]);
+    void sort(int arr[], int arrayLength);
+    void printArray(int arr[], int arrayLength);
+    int partition(int arr[], int start, int end);
+    void quickSort(int arr[], int start, int end);
 };
 #endif

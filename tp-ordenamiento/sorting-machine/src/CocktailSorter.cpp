@@ -1,9 +1,9 @@
 #include <CocktailSorter.h>
 #include <iostream>
 
-void CocktailSorter::sort(int arr[])
+void CocktailSorter::sort(int arr[], int arrayLength)
 {
-    int n = sizeof(arr) / sizeof(arr[0]);
+    int n = arrayLength;
     bool swapped = true;
     int start = 0;
     int end = n - 1;
@@ -37,12 +37,12 @@ void CocktailSorter::sort(int arr[])
         }
         ++start;
     }
-    printArray(arr);
+    printArray(arr, n);
 }
 
-void CocktailSorter::printArray(int arr[])
+void CocktailSorter::printArray(int arr[], int arrayLength)
 {
-    int n = sizeof(arr) / sizeof(arr[0]);
-    for (int i = 0; i < n; i++)
-        std::cout << arr[i] << std::endl;
+    for (int i = 0; i < arrayLength; i++)
+        std::cout << arr[i] << " ";
+    std::cout << "" << std::endl;
 }

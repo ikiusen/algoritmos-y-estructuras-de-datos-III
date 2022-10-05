@@ -9,6 +9,6 @@ private:
 public:
     SortingMachine(ISorter *sortMethod);
     void setSortingMethod(ISorter *sortMethod);
-    void sort(int arr[]);
+    void sort(int arr[], int arrayLength);
 };
 #endif
