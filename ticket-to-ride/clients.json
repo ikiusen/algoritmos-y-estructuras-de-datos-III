@@ -1,0 +1,18 @@
+{
+    "clients": [
+        {
+            "id": "1",
+            "name": "Thiago",
+            "surname": "Cabrera",
+            "dni": "42366235",
+            "email": "@gmail.com"
+        },
+        {
+            "id": "2",
+            "name": "Laureano",
+            "surname": "Cabrera",
+            "dni": "42000120",
+            "email": "@gmail.com"
+        }
+    ]
+}
