@@ -15,49 +15,49 @@ Client::~Client(){};
 
 void Client::setId(int id)
 {
-    m_id = id;
+    this->id = id;
 }
 
 int Client::getId()
 {
-    return m_id;
+    return id;
 }
 
 void Client::setName(std::string name)
 {
-    m_name = name;
+    this->name = name;
 }
 
 std::string Client::getName()
 {
-    return m_name;
+    return name;
 }
 
 void Client::setSurname(std::string surname)
 {
-    m_surname = surname;
+    this->surname = surname;
 }
 
 std::string Client::getSurname()
 {
-    return m_surname;
+    return surname;
 }
 
 void Client::setDNI(std::string dni)
 {
-    m_dni = dni;
+    this->dni = dni;
 }
 
 std::string Client::getDNI()
 {
-    return m_dni;
+    return dni;
 }
 
 void Client::setEmail(std::string email)
 {
-    m_email = email;
+    this->email = email;
 }
 std::string Client::getEmail()
 {
-    return m_email;
+    return email;
 }

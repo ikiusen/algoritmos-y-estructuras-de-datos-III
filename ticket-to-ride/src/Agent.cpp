@@ -16,58 +16,58 @@ Agent::~Agent(){};
 
 void Agent::setId(int id)
 {
-    m_id = id;
+    this->id = id;
 }
 
 int Agent::getId()
 {
-    return m_id;
+    return id;
 }
 
 void Agent::setName(std::string name)
 {
-    m_name = name;
+    this->name = name;
 }
 
 std::string Agent::getName()
 {
-    return m_name;
+    return name;
 }
 
 void Agent::setSurname(std::string surname)
 {
-    m_surname = surname;
+    this->surname = surname;
 }
 
 std::string Agent::getSurname()
 {
-    return m_surname;
+    return surname;
 }
 
 void Agent::setDNI(std::string dni)
 {
-    m_dni = dni;
+    this->dni = dni;
 }
 
 std::string Agent::getDNI()
 {
-    return m_dni;
+    return dni;
 }
 
 void Agent::setEmail(std::string email)
 {
-    m_email = email;
+    this->email = email;
 }
 std::string Agent::getEmail()
 {
-    return m_email;
+    return email;
 }
 
 void Agent::setDepartment(std::string department)
 {
-    m_department = department;
+    this->department = department;
 }
 std::string Agent::getDepartment()
 {
-    return m_department;
+    return department;
 }

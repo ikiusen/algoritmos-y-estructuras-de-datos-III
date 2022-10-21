@@ -57,12 +57,14 @@ void ClientManager::getClients()
 
 std::shared_ptr<IClient> ClientManager::getClientById(int id)
 {
+    std::shared_ptr<IClient> client = nullptr;
     int clientPosition = findClient(id);
     if (clientPosition != -1)
     {
         //fix warning
-        return clientList.at(clientPosition);
+        client = clientList.at(clientPosition);
     }
+    return client;
 }
 
 void ClientManager::readFromJson()

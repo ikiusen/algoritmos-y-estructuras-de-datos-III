@@ -57,10 +57,11 @@ void AgentManager::getAgents()
 
 std::shared_ptr<IAgent> AgentManager::getAgentById(int id)
 {
+    std::shared_ptr<IAgent> agent =  nullptr;
     int agentPosition = findAgent(id);
     if (agentPosition != -1)
     {
-        //fix warning
-        return agentList.at(agentPosition);
+        agent = agentList.at(agentPosition);
     }
+    return agent;
 }
