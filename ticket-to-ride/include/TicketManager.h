@@ -13,7 +13,7 @@ public:
     ~TicketManager();
     void addTicketToList(std::shared_ptr<Ticket> ticket);
     int findTicket(int id);
-    void createTicket(int id, std::shared_ptr<IClient> client, std::shared_ptr<IAgent> agent, std::string message, std::string creationDate);
+    void createTicket(int id, std::shared_ptr<Client> client, std::shared_ptr<Agent> agent, std::string message, std::string creationDate);
     void deleteTicket(int id);
     void updateTicket(int id, std::shared_ptr<Ticket> ticket);
     void getTickets();

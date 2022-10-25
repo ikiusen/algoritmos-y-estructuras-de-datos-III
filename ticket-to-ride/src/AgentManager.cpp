@@ -4,7 +4,7 @@ AgentManager::AgentManager(){};
 
 AgentManager::~AgentManager(){};
 
-void AgentManager::addAgentToList(std::shared_ptr<IAgent> agent)
+void AgentManager::addAgentToList(std::shared_ptr<Agent> agent)
 {
     agentList.push_back(agent);
 }
@@ -24,7 +24,7 @@ int AgentManager::findAgent(int id)
 
 void AgentManager::createAgent(int id, std::string name, std::string surname, std::string dni, std::string email, std::string department)
 {
-    std::shared_ptr<IAgent> agent = std::make_shared<Agent>(id, name, surname, dni, email, department);
+    std::shared_ptr<Agent> agent = std::make_shared<Agent>(id, name, surname, dni, email, department);
     addAgentToList(agent);
 }
 
@@ -37,7 +37,7 @@ void AgentManager::deleteAgent(int id)
     }
 }
 
-void AgentManager::updateAgent(int id, std::shared_ptr<IAgent> agent)
+void AgentManager::updateAgent(int id, std::shared_ptr<Agent> agent)
 {
     int agentPosition = findAgent(id);
     if (agentPosition != -1)
@@ -48,16 +48,16 @@ void AgentManager::updateAgent(int id, std::shared_ptr<IAgent> agent)
 
 void AgentManager::getAgents()
 {
-    for (std::shared_ptr<IAgent> element : agentList)
+    for (std::shared_ptr<Agent> element : agentList)
     {
         std::cout << element->getId() << " " << element->getName() << " " << element->getSurname() << " " << element->getDepartment() << std::endl;
         std::cout << " " << std::endl;
     }
 }
 
-std::shared_ptr<IAgent> AgentManager::getAgentById(int id)
+std::shared_ptr<Agent> AgentManager::getAgentById(int id)
 {
-    std::shared_ptr<IAgent> agent =  nullptr;
+    std::shared_ptr<Agent> agent =  nullptr;
     int agentPosition = findAgent(id);
     if (agentPosition != -1)
     {

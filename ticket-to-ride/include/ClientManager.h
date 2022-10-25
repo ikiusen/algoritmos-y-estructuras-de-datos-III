@@ -4,20 +4,23 @@
 #include <memory>
 #include <fstream>
 #include <Client.h>
-class ClientManager
+#include <IJsonHandler.h>
+class ClientManager : public IJsonHandler
 {
 private:
-    std::vector<std::shared_ptr<IClient>> clientList;
+    std::vector<std::shared_ptr<Client>> clientList;
 
 public:
     ClientManager();
     ~ClientManager();
-    void addClientToList(std::shared_ptr<IClient> client);
+    void addClientToList(std::shared_ptr<Client> client);
     int findClient(int id);
     void createClient(int id, std::string name, std::string surname, std::string dni, std::string email);
     void deleteClient(int id);
-    void updateClient(int id, std::shared_ptr<IClient> client);
+    void updateClient(int id, std::shared_ptr<Client> client);
     void getClients();
-    std::shared_ptr<IClient> getClientById(int id);
+    std::shared_ptr<Client> getClientById(int id);
+    void readFromJson(std::string filepath);
+    void writeToJson(std::string filepath);
 };
 #endif

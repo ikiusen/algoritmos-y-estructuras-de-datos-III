@@ -4,7 +4,7 @@ ClientManager::ClientManager(){};
 
 ClientManager::~ClientManager(){};
 
-void ClientManager::addClientToList(std::shared_ptr<IClient> client)
+void ClientManager::addClientToList(std::shared_ptr<Client> client)
 {
     clientList.push_back(client);
 }
@@ -24,7 +24,7 @@ int ClientManager::findClient(int id)
 
 void ClientManager::createClient(int id, std::string name, std::string surname, std::string dni, std::string email)
 {
-    std::shared_ptr<IClient> client = std::make_shared<Client>(id, name, surname, dni, email);
+    std::shared_ptr<Client> client = std::make_shared<Client>(id, name, surname, dni, email);
     addClientToList(client);
 }
 
@@ -37,7 +37,7 @@ void ClientManager::deleteClient(int id)
     }
 }
 
-void ClientManager::updateClient(int id, std::shared_ptr<IClient> client)
+void ClientManager::updateClient(int id, std::shared_ptr<Client> client)
 {
     int clientPosition = findClient(id);
     if (clientPosition != -1)
@@ -48,20 +48,37 @@ void ClientManager::updateClient(int id, std::shared_ptr<IClient> client)
 
 void ClientManager::getClients()
 {
-    for (std::shared_ptr<IClient> element : clientList)
+    for (std::shared_ptr<Client> element : clientList)
     {
         std::cout << element->getId() << " " << element->getName() << " " << element->getSurname() << std::endl;
         std::cout << " " << std::endl;
     }
 }
 
-std::shared_ptr<IClient> ClientManager::getClientById(int id)
+std::shared_ptr<Client> ClientManager::getClientById(int id)
 {
-    std::shared_ptr<IClient> client = nullptr;
+    std::shared_ptr<Client> client = nullptr;
     int clientPosition = findClient(id);
     if (clientPosition != -1)
     {
         client = clientList.at(clientPosition);
     }
     return client;
+}
+
+void ClientManager::readFromJson(std::string filepath)
+{
+    // works with concrete class only
+    std::vector<Client> auxList;
+    std::ifstream file(filepath);
+    json data = json::parse(file);
+    data.at("clients").get_to(auxList);
+    for (unsigned int i = 0; i < auxList.size(); i++)
+    {
+        createClient(i, auxList[i].getName(), auxList[i].getSurname(), auxList[i].getDNI(), auxList[i].getEmail());
+    }
+}
+
+void ClientManager::writeToJson(std::string filepath)
+{
 }
