@@ -68,6 +68,7 @@ std::shared_ptr<Client> ClientManager::getClientById(int id)
 
 void ClientManager::readFromJson(std::string filepath)
 {
+    //ESTO SE PUEDE RESOLVER TENIENDO LA INTERFAZ
     // works with concrete class only
     std::vector<Client> auxList;
     std::ifstream file(filepath);
