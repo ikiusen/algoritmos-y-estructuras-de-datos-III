@@ -7,14 +7,9 @@
 #include <TicketManager.h>
 #include <Ticket.h>
 
-using json = nlohmann::json;
-
 int main()
 {
-    Client c = {1, "Thiago", "Cabrera", "42366235", "@gmail.com"};
-    json j = c;
-    std::cout<<"serialization: "<< j << std::endl;
-    /*ClientManager cManager;
+    ClientManager cManager;
     cManager.createClient(1, "Thiago", "Cabrera", "42366235", "@gmail.com");
     cManager.createClient(2, "Laureano", "Cabrera", "1245546", "@gmail.com");
 
@@ -45,7 +40,7 @@ int main()
     TicketManager tManager;
     tManager.createTicket(1, cManager.getClientById(2), aManager.getAgentById(1), "Test ticket", "20221019");
     std::cout << "Ticket data: " << std::endl;
-    tManager.getTickets();*/ 
+    tManager.getTickets();
 
     return 0;
 }

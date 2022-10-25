@@ -1,7 +1,6 @@
 #ifndef AGENT_H
 #define AGENT_H
 #include <IAgent.h>
-#include "../vendors/nlohmann/json.hpp"
 class Agent : public IAgent
 {
 private:
@@ -28,7 +27,5 @@ public:
     std::string getEmail();
     void setDepartment(std::string department);
     std::string getDepartment();
-
-    NLOHMANN_DEFINE_TYPE_INTRUSIVE(Agent, id, name, surname, dni, email, department);
 };
 #endif

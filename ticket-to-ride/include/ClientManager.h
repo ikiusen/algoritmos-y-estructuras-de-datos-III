@@ -4,8 +4,7 @@
 #include <memory>
 #include <fstream>
 #include <Client.h>
-#include <IJsonHandler.h>
-class ClientManager : public IJsonHandler
+class ClientManager
 {
 private:
     std::vector<std::shared_ptr<IClient>> clientList;
@@ -20,7 +19,5 @@ public:
     void updateClient(int id, std::shared_ptr<IClient> client);
     void getClients();
     std::shared_ptr<IClient> getClientById(int id);
-    void readFromJson();
-    void writeToJson();
 };
 #endif
