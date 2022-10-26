@@ -62,7 +62,6 @@ std::string Agent::getEmail()
 {
     return email;
 }
-
 void Agent::setDepartment(std::string department)
 {
     this->department = department;
