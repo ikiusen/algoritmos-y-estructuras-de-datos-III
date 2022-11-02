@@ -2,7 +2,7 @@
 
 Ticket::Ticket() {}
 
-Ticket::Ticket(int id, std::shared_ptr<IClient> client, std::shared_ptr<IAgent> agent, std::string message, std::string creationDate)
+Ticket::Ticket(int id, std::shared_ptr<Client> client, std::shared_ptr<Agent> agent, std::string message, std::string creationDate)
 {
     setId(id);
     setClient(client);
@@ -20,19 +20,19 @@ int Ticket::getId()
 {
     return m_id;
 }
-void Ticket::setClient(std::shared_ptr<IClient> client)
+void Ticket::setClient(std::shared_ptr<Client> client)
 {
     m_client = client;
 }
-std::shared_ptr<IClient> Ticket::getClient()
+std::shared_ptr<Client> Ticket::getClient()
 {
     return m_client;
 }
-void Ticket::setAgent(std::shared_ptr<IAgent> agent)
+void Ticket::setAgent(std::shared_ptr<Agent> agent)
 {
     m_agent = agent;
 }
-std::shared_ptr<IAgent> Ticket::getAgent()
+std::shared_ptr<Agent> Ticket::getAgent()
 {
     return m_agent;
 }

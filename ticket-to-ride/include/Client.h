@@ -1,7 +1,8 @@
 #ifndef CLIENT_H
 #define CLIENT_H
-#include <IClient.h>
-class Client : public IClient
+#include <iostream>
+#include "../vendors/nlohmann/json.hpp"
+class Client
 {
 private:
     int id;
@@ -24,5 +25,7 @@ public:
     std::string getDNI();
     void setEmail(std::string email);
     std::string getEmail();
+
+    NLOHMANN_DEFINE_TYPE_INTRUSIVE(Client, name, surname, dni, email);
 };
 #endif

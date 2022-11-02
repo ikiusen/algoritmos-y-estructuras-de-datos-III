@@ -22,7 +22,7 @@ int TicketManager::findTicket(int id)
     return elementPosition;
 }
 
-void TicketManager::createTicket(int id, std::shared_ptr<IClient> client, std::shared_ptr<IAgent> agent, std::string message, std::string creationDate)
+void TicketManager::createTicket(int id, std::shared_ptr<Client> client, std::shared_ptr<Agent> agent, std::string message, std::string creationDate)
 {
     std::shared_ptr<Ticket> ticket = std::make_shared<Ticket>(id, client, agent, message, creationDate);
     addTicketToList(ticket);

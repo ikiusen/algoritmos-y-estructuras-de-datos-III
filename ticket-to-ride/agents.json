@@ -1,0 +1,20 @@
+{
+    "agents": [
+        {
+            "id": 1,
+            "name": "Fernando",
+            "surname": "Gallego",
+            "dni": "58712536",
+            "email": "@gmail.com",
+            "department": "it"
+        },
+        {
+            "id": 2,
+            "name": "Laura",
+            "surname": "Sierra",
+            "dni": "23568145",
+            "email": "@gmail.com",
+            "department": "it"
+        }
+    ]
+}
